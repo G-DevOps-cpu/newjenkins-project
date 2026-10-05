@@ -1,0 +1,12 @@
+{
+  "name": "jenkins-ec2-classroom",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A dependency-free application for learning Jenkins and EC2 deployments",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test",
+    "test:ci": "node --test --test-reporter=junit --test-reporter-destination=reports/tests.xml"
+  },
+  "engines": { "node": ">=22" }
+}

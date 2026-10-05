@@ -1,0 +1,8 @@
+node_modules/
+reports/
+dist/
+*.pem
+*.key
+.env
+*.tar
+*.tgz
