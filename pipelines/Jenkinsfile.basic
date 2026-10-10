@@ -1,5 +1,6 @@
 pipeline {
-    agent { label 'linux-docker' }
+    agent any
+    tools { nodejs 'nodeproject' }
     options { timestamps(); timeout(time: 10, unit: 'MINUTES') }
     stages {
         stage('Tool versions') { steps { sh 'node --version && npm --version' } }
