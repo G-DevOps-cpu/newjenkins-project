@@ -1,7 +1,9 @@
 pipeline {
     agent any
-    tools { nodejs 'nodeproject' dockerTool 'docker-project'}
-    
+    tools { 
+        nodejs 'nodeproject' 
+        dockerTool 'docker-project'
+    }
     options { timestamps(); disableConcurrentBuilds(); timeout(time: 15, unit: 'MINUTES') }
     stages {
         stage('Test') { steps { sh 'mkdir -p reports && npm run test:ci' } }
